@@ -2,3 +2,16 @@ body{
   background: black;
   color: white;
 }
+
+button{
+  width: 150px;
+  height: 150px;
+  margin-right: 25px;
+  border-radius: 50%;
+  border: none;
+  
+}
+
+button:hover {
+  cursor: pointer;
+}
