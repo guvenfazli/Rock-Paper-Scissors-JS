@@ -11,6 +11,8 @@
   <title>Rock Paper Scissors Game</title>
 </head>
 <body>
+
+  <h2>Rock Paper Scissors</h2>
   <button onclick="
     playerChoose('rock')
     ">
@@ -39,6 +41,16 @@
   <p class="js-result-table"></p>
 
   <p class="js-score-table"></p>
+
+  <input type="text" class="js-name-field" onkeyup="
+    nameThrower()
+  ">
+
+  <button onclick="
+    nameThrower()
+  ">Submit</button>
+
+  <p class="js-name"></p>
 
   
 
@@ -111,6 +123,15 @@
         .innerHTML = `Win: ${score.win} Lose: ${score.lose} Tie: ${score.tie} `
 
       localStorage.setItem('score', JSON.stringify(score))
+    }
+
+    function nameThrower() {
+      const inputElement = document.querySelector('.js-name-field')
+
+      let name = String(inputElement.value)
+
+      document.querySelector('.js-name')
+        .innerHTML = `Your name is: ${name}`
     }
 
 
