@@ -23,7 +23,16 @@
   ">
   <i class="fa-regular fa-hand-scissors fa-2xl"></i></button>
 
+  <p class="js-score-table"></p>
+
   <script>
+
+    let score = {
+      win: 0,
+      lose: 0,
+      tie: 0
+    }
+
     function computer() {
       const randomNumber = Math.random();
       let computerMove = '';
@@ -69,6 +78,16 @@
           result = 'Tie.'
         }
       }
+
+      if(result === 'Win.'){
+        score.win += 1
+      } else if(result === 'Lose.'){
+        score.lose += 1
+      } else if(result === 'Tie.'){
+        score.tie += 1
+      }
+
+      console.log(score)
 
       alert(`Your result is: ${result}`)
     }
