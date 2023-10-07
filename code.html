@@ -8,13 +8,19 @@
   <title>Document</title>
 </head>
 <body>
-  <button>
+  <button onclick="
+    playerChoose('rock')
+    ">
   <i class="fa-regular fa-hand-back-fist fa-2xl"></i></button>
   
-  <button>
+  <button onclick="
+    playerChoose('paper')
+  ">
   <i class="fa-regular fa-hand fa-2xl"></i></button>
   
-  <button>
+  <button onclick="
+    playerChoose('scissors')
+  ">
   <i class="fa-regular fa-hand-scissors fa-2xl"></i></button>
 
   <script>
@@ -29,6 +35,8 @@
       } else if(randomNumber > 2/3 && randomNumber < 1){
         computerMove = 'Scissors'
       }
+
+      return computerMove
     }
 
     function playerChoose(move) {
@@ -61,6 +69,8 @@
           result = 'Tie.'
         }
       }
+
+      alert(`Your result is: ${result}`)
     }
 
 
