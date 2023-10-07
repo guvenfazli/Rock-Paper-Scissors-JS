@@ -23,6 +23,16 @@
   ">
   <i class="fa-regular fa-hand-scissors fa-2xl"></i></button>
 
+  <button onclick="
+    score.win = 0
+    score.lose = 0
+    score.tie = 0
+    localStorage.removeItem('score')
+    document.querySelector('.js-score-table')
+      .innerHTML = `Win: ${score.win} Lose: ${score.lose} Tie: ${score.tie}`
+  
+  ">Reset Stats</button>
+
   <p class="js-result-table"></p>
 
   <p class="js-score-table"></p>
@@ -98,9 +108,6 @@
         .innerHTML = `Win: ${score.win} Lose: ${score.lose} Tie: ${score.tie} `
 
       localStorage.setItem('score', JSON.stringify(score))
-      
-
-      
     }
 
 
