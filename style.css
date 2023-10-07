@@ -9,6 +9,8 @@ button{
   margin-right: 25px;
   border-radius: 50%;
   border: none;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
   
 }
 
